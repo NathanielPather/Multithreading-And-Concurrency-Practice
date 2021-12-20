@@ -15,6 +15,6 @@ The join() method is also used to wait for completion of a thread before proceed
 
 ### Learning outcomes
 
-Knowledge on syntax and implementation of simple threads.
-Theoretical understanding of threads and their random relationship to the scheduler.
-Discovered the main thread and that it will always regain control after child thread(s) complete.
+* Knowledge on syntax and implementation of simple threads.
+* Theoretical understanding of threads and their random relationship to the scheduler.
+* Discovered the main thread and that it will always regain control after child thread(s) complete.
