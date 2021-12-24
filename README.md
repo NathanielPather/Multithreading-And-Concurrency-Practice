@@ -52,6 +52,7 @@ Two threads, A and B, are created.
 Each thread adds 1 to the counter 10 million times. This is the critical section.
 The critical section is surrounded by a lock and is unlocked after the counter is incremented.
 The main thread then regains control and prints the counter value.
+The final result is 20 million as expected.
 
 The reason for the program is to understand the randomness and unpredictability of poor thread implementation.
 Each run of the program yields a different result, and the correct counter value of 20 million is rarely achieved.
