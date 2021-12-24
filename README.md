@@ -42,3 +42,24 @@ Thread 2 adds 1 and saves 51. When thread 1 resumes, it will overwrite 51 with 5
 * This code is known as a critical section as it accesses a shared resource, and must not be concurrently executed by more than one thread.
 * The solution is mutual exclusion. If one thread is executing with a critical section, other threads are preventing from doing so.
 * Edsger Dijkstra completed work on this in 1968 in his paper, Cooperating Sequential Processes.
+
+## Locks
+### Explanation
+
+A basic program with two threads sharing a single variable.
+A volatile variable counter is initialized at 0.
+Two threads, A and B, are created.
+Each thread adds 1 to the counter 10 million times. This is the critical section.
+The critical section is surrounded by a lock and is unlocked after the counter is incremented.
+The main thread then regains control and prints the counter value.
+
+The reason for the program is to understand the randomness and unpredictability of poor thread implementation.
+Each run of the program yields a different result, and the correct counter value of 20 million is rarely achieved.
+
+### Learning outcomes
+
+* Discovered a single lock object needs to be used for one piece of data. The lock should be passed in through the threads constructor.
+* Locks are in one of two states. Available/Unlocked/Free or Acquired/Locked/Held.
+* Locks provide the programmer some control over scheduling as opposed to relying on the operating system.
+* The try block allows allows the critical section to only be accessed if the lock is free.
+* The finally blocka llows the lock to be released after the critical section has been processed.
