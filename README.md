@@ -63,4 +63,4 @@ Each run of the program yields a different result, and the correct counter value
 * Locks are in one of two states. Available/Unlocked/Free or Acquired/Locked/Held.
 * Locks provide the programmer some control over scheduling as opposed to relying on the operating system.
 * The try block allows allows the critical section to only be accessed if the lock is free.
-* The finally blocka llows the lock to be released after the critical section has been processed.
+* The finally block allows the lock to be released after the critical section has been processed.
